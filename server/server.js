@@ -1,12 +1,11 @@
-const express = require("express");
-const app = express();
-const PORT = 3001;
+const express = require("express")
+const app = express()
+const PORT = 3003
 
-app.use('/app', express.static("public"))
+app.use(express.json())
+app.use('/app', express.static("app"))
 
-app.listen(PORT, () => {
-    console.log(`http://localhost:3001/app`)
-})
+
 
  let usuarios = []
 //Metodo GET 
@@ -20,4 +19,8 @@ app.get('/user', (req, res) => {
 app.post('/user', (req, res) => {
     usuarios.push(req.body)
     res.end()
+})
+
+app.listen(PORT, () => {
+    console.log(`http://localhost:3003/app`)
 })
