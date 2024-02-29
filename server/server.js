@@ -1,17 +1,22 @@
 const express = require("express");
 const app = express();
-const PORT = 3001;
+const PORT = 3030;
 
 app.use(express.json());
+app.use("/", express.static("app"));
 
-let books = [{
-    Name:"The Alchemist",
-    description: "The Alchemist follows the journey of an Andalus",
-    Code: 1,
+let books = [];
 
-
+async function showbooks() {
+    const query = await fetch(`https://stephen-king-api.onrender.com/api/books`);
+    const data = await query.json();
+    books.push(data);
+    console.log(books);
 }
-]
+
+// Call the showbooks function
+showbooks();
+
 
 app.get("/books", (req, res) => {
   res.send(books)});
