@@ -75,3 +75,23 @@ body{
     justify-content: center;
     margin-top: 3rem;
 }
+
+.vct-left{
+    width: 7rem;
+    height: 10rem;
+}
+
+.vector-left{
+    margin-top: -14rem;
+    margin-left: -1rem;
+}
+
+.vct-right{
+    width: 6rem;
+    height: 22rem;
+}
+
+.vector-right{
+    margin-top: -18rem;
+    margin-left: 17rem;
+}
