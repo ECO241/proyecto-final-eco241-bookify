@@ -23,15 +23,13 @@ async function sendUser(){
     }
     fetch ("http://localhost:3003/user", box)
 }
-btn.addEventListener("click", async () => {
+btn.addEventListener("click", async (e) => {
+    e.preventDefault()
     users = {
         user: inputs[0].value,
         pass: inputs[1].value,
     }
     console.log(users)
     await sendUser()
+        window.location.href = '/app/screens/loan.html'; 
 })
-
-btn.addEventListener("click", ()=>{
-    window.location.replace("http://localhost:3003/app/screens/loan.html?")
-} )
