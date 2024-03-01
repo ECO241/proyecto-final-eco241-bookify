@@ -5,12 +5,10 @@ async function getUser() {
   const user = JSON.parse(localStorage.getItem("user"));
     console.log(user);
 }
-;
+getUser()
 const btn = document.getElementById("btn-sign");
 
 const inputs = document.getElementsByClassName("sign-up");
-
-
 let users = {
   user: "",
   pass: "",
