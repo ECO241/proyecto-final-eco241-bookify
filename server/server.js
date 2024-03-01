@@ -9,8 +9,16 @@ let books = [
   {
     Title: "The Great Gatsby",
     id: 1,
-  },
-];
+    loaned: false,
+  },{
+    Title: "The Catcher in the Rye",
+    id: 2,
+    loaned: false,
+  },{
+    Title: "To Kill a Mockingbird",
+    id: 3,
+    loaned: false,
+  }]
 
 app.get("/books", (req, res) => {
   res.send(books);
