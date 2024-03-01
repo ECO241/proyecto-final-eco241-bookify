@@ -31,3 +31,7 @@ btn.addEventListener("click", async () => {
     console.log(users)
     await sendUser()
 })
+
+btn.addEventListener("click", ()=>{
+    window.location.replace("http://localhost:3003/app/screens/loan.html?")
+} )
