@@ -1,4 +1,10 @@
-.body{
+body{
     font-family: "Poppins", sans-serif;
-    background-color: black;
+}
+
+.title-books{
+    color: #004D6B;
+    width: 15rem;
+    line-height: 2.625rem;
+    letter-spacing: -0.0625rem;
 }
