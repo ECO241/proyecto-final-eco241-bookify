@@ -26,10 +26,17 @@ async function sendUser() {
 }
 btn.addEventListener("click", async (e) => {
   e.preventDefault();
+
+  if (!inputs[0].value || !inputs[1].value) {
+    alert("Por favor, rellena todos los campos para continuar");
+    return;
+  }
+
   users = {
     user: inputs[0].value,
     pass: inputs[1].value,
   };
+
   console.log(users);
   await sendUser();
   window.location.href = "/app/screens/loan.html";
