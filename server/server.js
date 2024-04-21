@@ -1,35 +1,27 @@
-const express = require("express");
-const app = express();
-const PORT = 3003;
 
-app.use(express.json());
-app.use("/app", express.static("app"));
+const express = require("express")
+const app = express()
+const PORT = 3003
 
-let books = [
-  {
-    Title: "The Great Gatsby",
-    id: 1,
-    loaned: false,
-  },{
-    Title: "The Catcher in the Rye",
-    id: 2,
-    loaned: false,
-  },{
-    Title: "To Kill a Mockingbird",
-    id: 3,
-    loaned: false,
-  }]
+app.use(express.json())
+app.use('/app', express.static("app"))
 
-app.get("/books", (req, res) => {
-  res.send(books);
-});
 
-app.post("/books", (request, response) => {
-  console.log(request.body);
-  books.push(request.body);
-  response.end();
-});
+
+ let usuarios = []
+//Metodo GET 
+
+app.get('/user', (req, res) => {
+    res.send(usuarios)
+})
+
+//Metodo post
+
+app.post('/user', (req, res) => {
+    usuarios.push(req.body)
+    res.end()
+})
 
 app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}/app`);
-});
+    console.log(`http://localhost:3003/app`)
+})

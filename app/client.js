@@ -1,20 +1,44 @@
-async function getbooks() {
-    const query = await fetch(`http://localhost:3003/books`);
-    const data = await query.json();
-    return data;
-}
 
-async function displaybooks(books) {
-    const list = document.createElement("ul");
-    books.forEach((book) => {
-        const item = document.createElement("li");
-        item.textContent = book.Title;
-        list.appendChild(item);
-    });
-    document.body.appendChild(list); // Add this line to append the list to the document body
+async function getUser() {
+  const query = await fetch("http://localhost:3003/user");
+  const data = await query.json();
+  localStorage.setItem("user", JSON.stringify(data));
+  const user = JSON.parse(localStorage.getItem("user"));
+    console.log(user);
 }
+getUser()
+const btn = document.getElementById("btn-sign");
 
-document.getElementsByClassName("btn-loan")[0].addEventListener("click", async () => {
-    const books = await getbooks();
-    displaybooks(books);
+const inputs = document.getElementsByClassName("sign-up");
+let users = {
+  user: "",
+  pass: "",
+};
+
+async function sendUser() {
+  const box = {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(users),
+  };
+  fetch("http://localhost:3003/user", box);
+}
+btn.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  if (!inputs[0].value || !inputs[1].value) {
+    alert("Por favor, rellena todos los campos para continuar");
+    return;
+  }
+
+  users = {
+    user: inputs[0].value,
+    pass: inputs[1].value,
+  };
+
+  console.log(users);
+  await sendUser();
+  window.location.href = "/app/screens/loan.html";
 });
