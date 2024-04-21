@@ -1,3 +1,4 @@
+
 async function getUser() {
   const query = await fetch("http://localhost:3003/user");
   const data = await query.json();
