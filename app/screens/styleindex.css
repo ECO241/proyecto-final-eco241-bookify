@@ -1,0 +1,97 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.title-books{
+    color: #004D6B;
+    width: 15rem;
+    line-height: 2.625rem;
+    letter-spacing: -0.0625rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.text-mini{
+    color: #004D6B;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.5rem;
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+}
+
+.sign-up{
+    width: 18rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 2.25rem;
+    border-color: #004D6B;
+    background-color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-signUp{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#btn-sign{
+    width: 8.5rem;
+    height: 2.3rem;
+    border-radius: 2.5rem;
+    border-color: transparent;
+    background-color: #FFCB3A;
+    color: #004D6B;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+}
+
+.btn-signdiv{
+    display: flex;
+    justify-content: center;
+}
+
+.img-main{
+    margin-top: 2rem;
+}
+
+.container-mainimg{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-biblio{
+    width: 5.6875rem;
+    height: 2rem;
+}
+
+.container-logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.vct-left{
+    width: 7rem;
+    height: 10rem;
+}
+
+.vector-left{
+    margin-top: -14rem;
+    margin-left: -1rem;
+}
+
+.vct-right{
+    width: 6rem;
+    height: 22rem;
+}
+
+.vector-right{
+    margin-top: -18rem;
+    margin-left: 17rem;
+}
