@@ -6,7 +6,6 @@ app.use(express.json())
 
 
 app.use('/', express.static("app/screens/"))
-
 app.use('/api', router)
 
 app.listen(PORT, () => {
