@@ -4,7 +4,7 @@ const app = express()
 const PORT = 3003
 
 app.use(express.json())
-app.use('/app', express.static("app"))
+app.use('/', express.static("app/screens/"))
 
 
 
@@ -23,5 +23,5 @@ app.post('/user', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`http://localhost:3003/app`)
+    console.log(`http://localhost:3003/`)
 })
