@@ -13,6 +13,4 @@ router.post('/user', (req, res) => {
     res.end()
 })
 
-
-
-export default router;
+module.exports = router;
