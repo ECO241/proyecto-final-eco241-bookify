@@ -1,6 +1,7 @@
 
+
 async function getUser() {
-  const query = await fetch("http://localhost:3003/user");
+  const query = await fetch("http://localhost:3004/user");
   const data = await query.json();
   localStorage.setItem("user", JSON.stringify(data));
   const user = JSON.parse(localStorage.getItem("user"));
@@ -15,6 +16,7 @@ let users = {
   pass: "",
 };
 
+
 async function sendUser() {
   const box = {
     method: "POST",
@@ -23,7 +25,7 @@ async function sendUser() {
     },
     body: JSON.stringify(users),
   };
-  fetch("http://localhost:3003/user", box);
+  fetch("http://localhost:3004/user", box);
 }
 btn.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -42,3 +44,4 @@ btn.addEventListener("click", async (e) => {
   await sendUser();
   window.location.href = "/app/screens/loan.html";
 });
+
