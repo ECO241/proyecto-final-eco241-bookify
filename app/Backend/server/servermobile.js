@@ -14,12 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // Enrutamientos
-app.use('/Farmacos', routerFarmacos);
+// app.use('/Farmacos', routerFarmacos);
 
 
 
 
 //puerto
 app.listen(PORT, () => {
-    console.log(`App listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${PORT}`);
 });
