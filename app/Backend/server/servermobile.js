@@ -5,8 +5,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = 3005;
 
-
-// Definir rutas
+// Llamando routers
+const routerLibros = require('.../app/Backend/routes/booksRouter.js');
+const routerUsuarios = require('.../app/Backend/routes/userRouter.js');
 
 
 app.use(express.json());
@@ -14,10 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // Enrutamientos
-// app.use('/Farmacos', routerFarmacos);
-
-
-
+app.use('/apiBooks', routerLibros);
+app.use('/apiUsuarios', routerUsuarios);
 
 //puerto
 app.listen(PORT, () => {

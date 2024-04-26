@@ -1,11 +1,21 @@
-const express = require("express");
-const plantillaRouter = express.Router();
-const plantillaController = require('../handlers/plantillaController');
+const express = require('express');
+const routerUsuarios = express.Router();
+const z = require('zod');
 
-// Ruta para reducir el inventario de fármacos
-plantillaRouter.post('/reducir-inventario', plantillaController.controller);
+//traer todos los usuarios
+routerUsuarios.get('/users', (req, res) => {
+    res.send("aqui van los libros")
+})
 
-// Otras rutas para los fármacos...
+//traer un usuario
+routerUsuarios.get('/users/:id', (req, res) => {
+    res.send("aqui va un libro")
+})
 
+//añade el usuario a la api
+routerUsuarios.post('/users', (req, res) => {
+    usuarios.push(req.body)
+    res.end()
+})
 
-module.exports = plantillaRouter
+module.exports = routerUsuarios;
