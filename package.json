@@ -5,7 +5,7 @@
   "main": "servermobile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app/Backend/server/servermobile.js" 
+    "start": "nodemon app/Backend/server/servermobile.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.42.7",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "socket.io": "^4.7.5",
     "zod": "^3.23.4"
