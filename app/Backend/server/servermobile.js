@@ -5,10 +5,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = 3005;
 
-// Llamando routers
-const routerLibros = require('.../app/Backend/routes/booksRouter.js');
-const routerUsuarios = require('.../app/Backend/routes/userRouter.js');
 
+// Llamando routers
+const routerLibros = require('.../app/Backend/routes/bookRouter.js');
+const routerUsuarios = require('./app/Backend/routes/userRouter.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
