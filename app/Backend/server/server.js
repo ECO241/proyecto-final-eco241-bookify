@@ -3,9 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
+const PORT = 3005;
+
 
 // Definir rutas
-const routerFarmacos = require('./router/farmacosRouter')
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,8 +18,8 @@ app.use('/Farmacos', routerFarmacos);
 
 
 
-const port = 3000;
 
-app.listen(port, () => {
+
+app.listen(PORT, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
