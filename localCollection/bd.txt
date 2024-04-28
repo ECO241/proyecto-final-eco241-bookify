@@ -1,0 +1,3 @@
+Aqui crearemos nuestra base de datos quemada para probar nuestro proyecto
+luego integraremos supabase cuando hagamos comprobación de que nuestras peticiones 
+funcionan :p 
