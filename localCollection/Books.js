@@ -1,4 +1,4 @@
-let books = [{
+export let books = [{
     id: 1,
     title: 'The Great Gatsby',
     autor: 'F. Scott Fitzgerald',

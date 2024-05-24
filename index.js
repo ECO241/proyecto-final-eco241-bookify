@@ -10,7 +10,7 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
-
+app.use(express.static('js'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
@@ -23,10 +23,7 @@ app.get('/indexApp', function(req, res) {
     res.sendFile(path.join(__dirname, 'static/indexApp/indexApp.html'));
 });
 
-
-
-
-
+app.use('/static', express.static(path.join(__dirname, '/static')));
 
 
 server.listen(PORT, () => {
