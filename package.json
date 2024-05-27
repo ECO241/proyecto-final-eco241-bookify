@@ -5,7 +5,7 @@
   "main": "servermobile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app/Backend/server/servermobile.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
