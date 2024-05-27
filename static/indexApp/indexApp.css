@@ -13,6 +13,7 @@ h3{
     margin-left: 23px;
     font-weight: lighter;
 }
+
 #contenedorimg{
     display: flex;
     justify-content: center;
@@ -66,15 +67,17 @@ h3{
 
 #decoracion1{
     position: absolute;
-    left: -5%;
+    left: 0%;
     width: 117.55px;
     height: 170.32px;
+    object-fit: cover;
 
 }
 
 #decoracion2{
-    left: 80%;
+    left: 74%;
     position: absolute;
     width: 109.15px;
     height: 328.15px;
+    object-fit: cover;
 }
