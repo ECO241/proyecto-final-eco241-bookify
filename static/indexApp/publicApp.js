@@ -1,4 +1,4 @@
-const FECHA = new Date(2024, 4, 30, 9, 0, 0, 0);
+const FECHA = new Date(2024, 4, 26, 11, 0, 0, 0);
 function cuentaAtras() {
 console.log(FECHA);
 const HOY = new Date().getTime();
