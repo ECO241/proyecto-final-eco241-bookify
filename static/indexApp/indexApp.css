@@ -7,19 +7,22 @@ body{
 h1{
     margin-left: 23px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 97%;
+    margin-top: 3px;
 }
 h3{ 
     margin-left: 23px;
     font-weight: lighter;
+    margin-top: -10px;
 }
 
 #contenedorimg{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 42px;
+    margin-top: 25px;
 
 }
 #form{
