@@ -37,6 +37,7 @@ h3{
     width: 309px;
     border: 1.5px solid #004d6b;
     border-radius: 40px;
+    text-align: center;
   
     
 }
@@ -45,6 +46,7 @@ h3{
     width: 309px;
     border: 1.5px solid #004d6b;
     border-radius: 40px;
+    text-align: center;
 }
 
 #input1::placeholder{
