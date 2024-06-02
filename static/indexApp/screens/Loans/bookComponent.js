@@ -13,19 +13,21 @@ render() {
     <style>
         :host {
         display: flex;
-        flex-direction: column;
-        width: 300px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
+        flex-direction: row;
+        width: 319px;
+        height: 166px;
+        background-color: #E5E9EB;
+        border-radius: 19px;
         padding: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .cover-container {
-        width: 100%;
-        height: 200px;
+        width: 32%;
+        height: 210px;
         overflow: hidden;
         border-radius: 10px;
+        padding-top: 12px;
+        padding-left: 12px;
         }
 
         .cover {
@@ -34,13 +36,13 @@ render() {
         }
 
         .info {
-        display: flex;
         flex-direction: column;
-        margin-top: 10px;
+        margin-left: 15px;
+        margin-top: -15px;
         }
 
         .title {
-        font-size: 1.5em;
+        font-size: 20px;
         font-weight: bold;
         margin-bottom: 5px;
         }
@@ -60,7 +62,7 @@ render() {
         }
 
         .days-left {
-        font-size: 1em;
+        font-size: 1em
         }
     </style>
 
