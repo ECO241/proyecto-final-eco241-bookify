@@ -1,0 +1,42 @@
+#contenedorimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 42px;
+    margin-top: 25px;
+
+}
+
+h1{
+    margin-left: 23px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 98%;
+    margin-top: 3px;
+    font-family: 'poppins', sans-serif;
+    width: 230px;
+}
+
+#contenedorimg2{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 42px;
+    margin-top: 150px;
+
+}
+#decoracion1{
+    position: absolute;
+    left: 0%;
+    width: 117.55px;
+    height: 170.32px;
+    object-fit: cover;
+
+}
+
+#decoracion2{
+    left: 74%;
+    position: absolute;
+    width: 109.15px;
+    height: 328.15px;
+    object-fit: cover;
+}
