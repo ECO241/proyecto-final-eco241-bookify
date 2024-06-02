@@ -1,3 +1,12 @@
+body{
+    
+    font-family: 'poppins', sans-serif;
+    color: #004d6b;
+    overflow: hidden;
+}
+
+
+
 #contenedorimg{
     display: flex;
     justify-content: center;
@@ -21,7 +30,8 @@ h1{
     justify-content: center;
     align-items: center;
     margin-bottom: 42px;
-    margin-top: 150px;
+    margin-top: 80px;
+    margin-left: 38px;
 
 }
 #decoracion1{
@@ -30,13 +40,20 @@ h1{
     width: 117.55px;
     height: 170.32px;
     object-fit: cover;
+    margin-top: -320px;
+    margin-left: -40px;
 
 }
 
 #decoracion2{
-    left: 74%;
     position: absolute;
-    width: 109.15px;
-    height: 328.15px;
+    left: 83.5%;
+    height: 419.503px;
     object-fit: cover;
+    margin-top: -360px;
+    
+    
+
+
+    
 }
