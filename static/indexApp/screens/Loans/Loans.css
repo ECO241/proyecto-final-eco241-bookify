@@ -1,0 +1,13 @@
+body{
+    
+    font-family: 'poppins', sans-serif;
+    color: #004d6b;
+}
+
+h1{
+    margin-left: 23px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 97%;
+    margin-top: 3px;
+}
