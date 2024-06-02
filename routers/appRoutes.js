@@ -3,13 +3,16 @@ const path = require('path'); // Add this line
 
 const router = express.Router();
 
-let books = []
 
 
-router.get('/', (req, res) => {
-    res.json(books);
+const BooksController = require('../controllers/utils/Bookservices');
+
+
+ router.get('/',  BooksController.getAllBooks);
+
+router.get('/users', (req, res) => {
+    res.json(users);
 });
-
 
 
 router.get('/Loans', function(req, res) {
@@ -30,7 +33,6 @@ router.get('/Thanks', function(req, res) {
 });
 
 
-router.use('/static', express.static(path.join(__dirname, '/static')));
 
 
 

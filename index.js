@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 
-const books = require('./routers/appRoutes.js');
+const books = require('./routers/appRoutes');
 
 app.use('/books', books);
 
