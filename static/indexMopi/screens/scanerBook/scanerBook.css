@@ -16,3 +16,9 @@ body{
     font-weight: 600;
     font-size: 1rem;
 }
+
+.decoracion{
+    width: 7rem;
+    margin-top: -20rem;
+    display: block;
+}
