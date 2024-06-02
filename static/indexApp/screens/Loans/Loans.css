@@ -7,7 +7,7 @@ body{
 h1{
     margin-left: 23px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 97%;
     margin-top: 3px;
     width: 70px;
@@ -19,5 +19,17 @@ h1{
     align-items: center;
     margin-bottom: 42px;
     margin-top: 25px;
+}
 
+#div-loan{
+    display: flex;
+    padding-left: 19px;
+    padding-right: 10px;
+}
+
+p{
+    font-size: 15px;
+    line-height: 120%;
+    margin-top: 15px;
+    margin-left: 10px;
 }
