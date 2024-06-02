@@ -1,7 +1,20 @@
 .decoracion{
     width: 5rem;
+    margin-top: -60rem;
+    margin-left: 87rem;
 }
 
 .texto{
     font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+}
+
+.contenido{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.muñequito{
+    margin-top: 10rem;
 }
