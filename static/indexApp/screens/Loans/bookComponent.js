@@ -19,6 +19,8 @@ render() {
         background-color: #E5E9EB;
         border-radius: 19px;
         padding: 10px;
+        margin-left: 9px;
+        margin-top: 18px;
         }
 
         .cover-container {
@@ -37,8 +39,8 @@ render() {
 
         .info {
         flex-direction: column;
-        margin-left: 15px;
-        margin-top: -15px;
+        margin-left: 16px;
+        margin-top: 15px;
         }
 
         .title {
@@ -49,21 +51,20 @@ render() {
 
         .author {
         font-size: 1em;
-        margin-bottom: 10px;
+        margin-top: -5px;
         }
 
         .edition {
         background-color: #ffc107;
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 5px;
+        color: #004d6b;
+        padding: 5px 10px 5px 10px;
+        border-radius: 20px;
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: ;
+        width: 70px;
+        
         }
 
-        .days-left {
-        font-size: 1em
-        }
     </style>
 
     <div class="cover-container">
@@ -73,7 +74,6 @@ render() {
         <h2 class="title">${this.getAttribute('title')}</h2>
         <p class="author">${this.getAttribute('author')}</p>
         <p class="edition">${this.getAttribute('edition')}</p>
-        <p class="days-left">${this.getAttribute('days-left')}</p>
     </div>
     `;
 }
