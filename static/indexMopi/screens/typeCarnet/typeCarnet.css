@@ -1,0 +1,72 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    background-color: #ffffff;
+    color: #004D6B;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+main {
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.student-id-img {
+    max-width: 150px;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-code {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    border: 2px solid #fbc02d;
+    border-radius: 5px;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fbc02d;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.btn.primary:hover {
+    background-color: #e3a008;
+    transform: scale(1.05);
+}
