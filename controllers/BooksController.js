@@ -18,7 +18,7 @@ const SupabaseServices = {
       return data;
     },
   
-    getBookById: async () => {
+    getBookById: async (id) => {
       const { data, error } = await supabase
         .from("Books")
         .select()

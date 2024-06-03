@@ -1,20 +1,22 @@
+2
 
-const supabaseServices = require('../BooksController.js');
 
-const BooksController = {
-    getAllBooks: async (req, res) => {
+const LoansController = require('../LoansController.js');
+
+const LoansService = {
+    getAllLoanss: async (req, res) => {
       try{
-        const data = await supabaseServices.getAllBooks();
-        res.json({Books: data});
+        const data = await LoansController.getAllLoanss();
+        res.json({Loanss: data});
       } catch (error) {
         
         
         res.status(500).json({ success: false, error: "Error interno"});      
       }
     },
-    getBookById: async (req, res) => {
+    getLoansById: async (req, res) => {
       try{
-        const data = await supabaseServices.getBookById(req.params.id);
+        const data = await LoansController.getLoansById(req.params.id);
         res.json({ success: true, data});      
       } catch (error) {
         console.error("No se pudo traer data de Supabase", error.message);
@@ -24,4 +26,4 @@ const BooksController = {
 }
 
 
-module.exports = BooksController;
+module.exports = LoansService;
