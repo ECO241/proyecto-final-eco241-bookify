@@ -6,17 +6,18 @@ const router = express.Router();
 
 const UsersController = require('../controllers/utils/UserServices.js');
 const BooksController = require('../controllers/utils/Bookservices.js');
-const LoansController = require('../controllers/LoansController.js');
-
+const LoansController = require('../controllers/utils/LoansServices.js');
 
  router.get('/',  BooksController.getAllBooks);
- router.get('/:id',  BooksController.getBookById);
+ router.get('/:id',  BooksController.getAllBooks);
 
 router.get('/users', UsersController.getAllUsers);
 
 router.get('/users/:id', UsersController.getUserById);
 
 router.get('/Loansdata', LoansController.getAllLoans);
+
+router.get('/Loansdata/:id', LoansController.getLoanById);
 
 router.get('/Loans', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexApp/screens/Loans/Loans.html'));

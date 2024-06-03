@@ -18,18 +18,19 @@ const LoansController = {
       return data;
     },
   
-    getloanById: async (id) => {
-      const { data, error } = await supabase
-        .from("Loans")
-        .select()
-        .eq("id", id);
-      if (error) {
-        throw new Error(error.message);
-      }
-      return data;
-    },
-  
-    };
-  
+            getLoanById: async (id) => {
+                const { data, error } = await supabase
+                    .from("Loans")
+                    .select('*')
+                    .eq("id", id);
 
-module.exports = LoansController;
+                if (error) {
+                    throw new Error(error.message);
+                }
+                return data;
+            },
+        
+            };
+        
+
+    module.exports = LoansController;
