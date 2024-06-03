@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 
-const books = require('./routers/mopiRoutes');
+const books = require('./routers/mopiRoutes.js');
 
 app.use('/books', books);
 
