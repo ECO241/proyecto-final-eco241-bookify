@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/prueba', function(req, res) {
-    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/cosa1/cosa1.html'));
+    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/indexMopi/indexMopi.html'));
 }); 
 
 module.exports = router;
