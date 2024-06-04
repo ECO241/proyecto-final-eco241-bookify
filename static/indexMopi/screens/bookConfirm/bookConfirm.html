@@ -12,40 +12,23 @@
             <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/logobiblo.png?raw=true" alt="Biblioteca Logo" class="logo">
         </header>
         <main>
-           
-            <!-- Prueba -->
-            <book-card>
-                <div class="cover-container">
-                    <img class="cover" src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/libro1.png?raw=true" alt="The Great Gatsby">
-                </div>
-                <div class="info">
-                    <h2 class="title">The Great Gatsby</h2>
-                    <p class="author">F. Scott Fitzgerald</p>
-                    <span class="edition">Ed.2001</span>
-                </div>
-            </book-card>
-            
-            <!-- fin prueba -->
-            
-
-            <book-card></book-card>
-
+            <div id="book-card-container"></div>
             <div class="buttons">
                 <button class="btn secondary" onclick="goToScaneerBook()">Volver a escanear</button>
                 <button class="btn primary" onclick="goToScanQr()">Continuar</button>
             </div>
         </main>
     </div>
-
+    <script src="/static/indexMopi/screens/bookConfirm/bookCard.js"></script>
     <script>
-        function goToScanQr() {
-            window.location.href = 'scanerqr';
-        }
-
         function goToScaneerBook() {
             window.location.href = 'scanerbook';
         }
-    </script>
+
+        function goToScanQr() {
+            window.location.href = 'scanerqr';
+    }</script>
 </body>
 </html>
+
 

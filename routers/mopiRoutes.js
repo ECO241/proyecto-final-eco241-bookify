@@ -14,7 +14,7 @@ router.get('/Carnet', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/typeCarnet/typeCarnet.html'));
 }); 
 
-router.get('/Books', function(req, res) {
+router.get('/loans', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/bookConfirm/bookConfirm.html'));
 }); 
 
