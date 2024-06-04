@@ -1,0 +1,82 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    background-color: #ffffff;
+    color: #004D6B;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    background-image: url(https://github.com/NaranjaDev/imagenes-bookify/blob/main/decoracion1.png?raw=true), url(https://github.com/NaranjaDev/imagenes-bookify/blob/main/decoration4.png?raw=true);
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100px, 75px;
+    background-position: center left, 93rem center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.logo {
+    max-width: 100px;
+}
+
+main {
+    margin-top: 15px;
+}
+
+
+
+
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+p {
+    font-size: 35px;
+    font-weight: normal;
+    margin: 10px;
+}
+
+.student-id-img {
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+.codigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-code {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    border: 2px solid #fbc02d;
+    border-radius: 5px;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fbc02d;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.btn.primary:hover {
+    background-color: #e3a008;
+    transform: scale(1.05);
+}

@@ -1,0 +1,111 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    background-color: #ffffff;
+    color: #004D6B;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    background-image: url(https://github.com/NaranjaDev/imagenes-bookify/blob/main/decoracion1.png?raw=true), url(https://github.com/NaranjaDev/imagenes-bookify/blob/main/decoration4.png?raw=true);
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100px, 75px;
+    background-position: center left, 93rem center;
+}
+
+.container {
+    text-align: center;
+    padding: 0 250px 0 250px ;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+main {
+    margin-top: 30px;
+}
+
+book-card {
+    display: flex;
+    align-items: center;
+    background-color: #f0f4f8;
+    padding: 15px 20px 4px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    
+}
+
+book-card img {
+    max-width: 250px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.info {
+    text-align: left;
+}
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    color: #004D6B;
+}
+
+.author {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #004D6B;
+}
+
+.edition {
+    display: inline-block;
+    background-color: #fbc02d;
+    color: #004D6B;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.btn.primary {
+    background-color: #fbc02d;
+    color: #ffffff;
+}
+
+.btn.primary:hover {
+    background-color: #e3a008;
+    transform: scale(1.05);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: #004D6B;
+    border: 2px solid #fbc02d;
+}
+
+.btn.secondary:hover {
+    background-color: #fbc02d;
+    color: #ffffff;
+    transform: scale(1.05);
+}
