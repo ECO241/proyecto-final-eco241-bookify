@@ -5,11 +5,18 @@ body {
     color: #004D6B;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+
+    background-image: url(https://github.com/NaranjaDev/imagenes-bookify/blob/main/decoracion1.png?raw=true), url(https://github.com/NaranjaDev/imagenes-bookify/blob/main/decoration4.png?raw=true);
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100px, 75px;
+    background-position: center left, 93rem center;
 }
 
 .container {
     text-align: center;
-    padding: 20px;
+    padding: 0 250px 0 250px ;
 }
 
 header {
@@ -24,44 +31,45 @@ main {
     margin-top: 30px;
 }
 
-.book {
+book-card {
     display: flex;
     align-items: center;
     background-color: #f0f4f8;
-    padding: 10px;
+    padding: 15px 20px 4px 20px;
     border-radius: 10px;
     margin: 20px 0;
+    
 }
 
-.book img {
-    max-width: 60px;
+book-card img {
+    max-width: 250px;
     margin-right: 20px;
     border-radius: 5px;
 }
 
-.book-info {
+.info {
     text-align: left;
 }
 
-.book-info h2 {
+.title {
     margin: 0;
-    font-size: 18px;
-    color: #0c2238;
+    font-size: 20px;
+    color: #004D6B;
 }
 
-.book-info p {
+.author {
     margin: 5px 0;
-    font-size: 14px;
-    color: #5f6368;
+    font-size: 18px;
+    color: #004D6B;
 }
 
 .edition {
     display: inline-block;
     background-color: #fbc02d;
-    color: #ffffff;
+    color: #004D6B;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .buttons {
@@ -92,7 +100,7 @@ main {
 
 .btn.secondary {
     background-color: transparent;
-    color: #0c2238;
+    color: #004D6B;
     border: 2px solid #fbc02d;
 }
 

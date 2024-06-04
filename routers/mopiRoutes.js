@@ -10,8 +10,17 @@ router.get('/', (req, res) => {
     res.json(books);
 });
 
-router.get('/prueba', function(req, res) {
-    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/indexMopi/indexMopi.html'));
+router.get('/Home', function(req, res) {
+    res.sendFile(path.join(__dirname, '../static/indexMopi/indexMopi.html'));
 }); 
+
+router.get('/Carnet', function(req, res) {
+    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/typeCarnet/typeCarnet.html'));
+}); 
+
+router.get('/Books', function(req, res) {
+    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/bookConfirm/bookConfirm.html'));
+}); 
+
 
 module.exports = router;
