@@ -52,12 +52,6 @@ const cerrarCamara = () => {
   canvasElement.hidden = true;
   btnScanQR.hidden = false;
 };
-
-const activarSonido = () => {
-  var audio = document.getElementById('audioScaner');
-  audio.play();
-}
-
 //callback cuando termina de leer el codigo QR
 qrcode.callback = (respuesta) => {
   if (respuesta) {

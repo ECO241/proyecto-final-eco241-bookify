@@ -6,11 +6,6 @@ const router = express.Router();
 
 let books = []
 
-
-router.get('/', (req, res) => {
-    res.json(books);
-});
-
 router.get('/Home', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/indexMopi.html'));
 }); 
