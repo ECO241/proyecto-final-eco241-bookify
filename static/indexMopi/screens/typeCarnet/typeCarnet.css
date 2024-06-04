@@ -14,70 +14,69 @@ body {
     background-position: center left, 93rem center;
 }
 
-
 .container {
     text-align: center;
     padding: 20px;
 }
 
-header {
-    margin-bottom: 20px;
-}
+
 
 .logo {
     max-width: 100px;
 }
 
 main {
-    margin-top: 50px;
+    margin-top: 15px;
 }
+
+
+
+
 
 h1 {
-    font-size: 40px;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 60px;
+    font-size: 35px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin: 10px;
 }
 
-.buttons {
+p {
+    font-size: 35px;
+    font-weight: normal;
+    margin: 10px;
+}
+
+.student-id-img {
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+form {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-code {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    border: 2px solid #fbc02d;
+    border-radius: 5px;
 }
 
 .btn {
-    font-size: 32px;
-    font-weight: medium;
-    padding: 70px 100px;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.btn.primary {
     background-color: #fbc02d;
     color: #ffffff;
+    border-radius: 5px;
 }
 
 .btn.primary:hover {
     background-color: #e3a008;
-    transform: scale(1.05);
-}
-
-.btn.secondary {
-    background-color: transparent;
-    color: #004D6B;
-    border: 2px solid #fbc02d;
-}
-
-.btn.secondary:hover {
-    background-color: #fbc02d;
-    color: #ffffff;
     transform: scale(1.05);
 }
