@@ -31,11 +31,21 @@
             <book-card></book-card>
 
             <div class="buttons">
-                <button class="btn secondary">Volver a escanear</button>
-                <button class="btn primary">Continuar</button>
+                <button class="btn secondary" onclick="goToScaneerBook()">Volver a escanear</button>
+                <button class="btn primary" onclick="goToScanQr()">Continuar</button>
             </div>
         </main>
     </div>
+
+    <script>
+        function goToScanQr() {
+            window.location.href = 'scanerqr';
+        }
+
+        function goToScaneerBook() {
+            window.location.href = 'scanerbook';
+        }
+    </script>
 </body>
 </html>
 

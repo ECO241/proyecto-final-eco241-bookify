@@ -22,7 +22,7 @@ router.get('/thanks', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/screenThanks/screenThanks.html'));
 }); 
 
-router.get('/scanerqr', function(req, res) {
+router.get('/scanerbook', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/scanerBook/scanerBook.html'));
 }); 
 
