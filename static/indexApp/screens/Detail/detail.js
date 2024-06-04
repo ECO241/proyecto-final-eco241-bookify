@@ -15,8 +15,8 @@ async function getinfo(id) {
         let data = await response.json();
         let book = data.data;
         let inside = book[0];
-        console.log('Fetched data:', data); // Debugging line
-        console.log('Book:', book); // Debugging line
+        console.log('Fetched data:', data); 
+        console.log('Book:', book); 
         title.innerHTML=  inside.Name
         author.innerHTML=  inside.Author
         edition.innerHTML=  inside.Edition

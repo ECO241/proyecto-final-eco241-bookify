@@ -27,6 +27,8 @@ const encenderCamara = () => {
     });
 };
 
+
+
 //funciones para levantar las funiones de encendido de la camara
 function tick() {
   canvasElement.height = video.videoHeight;
@@ -55,14 +57,17 @@ const cerrarCamara = () => {
 //callback cuando termina de leer el codigo QR
 qrcode.callback = (respuesta) => {
   if (respuesta) {
-    //console.log(respuesta);
-    Swal.fire(respuesta)
+    
+    console.log(respuesta);
+    Swal.fire("Scaneado correctamente")
     activarSonido();
     //encenderCamara();    
     cerrarCamara();    
-
+    
   }
 };
+
+
 //evento para mostrar la camara sin el boton 
 window.addEventListener('load', (e) => {
   encenderCamara();
