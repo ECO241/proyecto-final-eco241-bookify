@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Loans.css">
-    <title>Prestamos</title>
+    <title>Préstamos</title>
 </head>
 <body>
-    <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/logobiblo.png?raw=true" alt="" height="40px">
+    <div id="contenedorimg">
+    <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/logobiblo.png?raw=true" alt="" height="30px">
+    </div>
+    
     <h1>Tus préstamos</h1>
     <div id="div-loan">
-        <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/persona3.png?raw=true" alt="" height="80px">
-        <p>Aquí puedes ver información de tus préstamo vigentes y sus fechas de devolución.</p>
+        <img src="character-2.png" alt="" height="90px">
+        <p>Aquí puedes ver información de tus préstamos vigentes y sus tiempos de devolución.</p>
     </div>
 
-    <div id="book-container">
-        
-    </div>
+    //Este es de prueba//
+    <book-card
+    cover-src="https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg"
+    title="The Great Gatsby"
+    author="F. Scott Fitzgerald"
+    edition="Ed. 2001"
+    ></book-card>
+
+    <book-card></book-card>
+    
+    <script src="bookComponent.js"></script>
+
 </body>
 </html>

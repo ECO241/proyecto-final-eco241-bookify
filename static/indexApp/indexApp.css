@@ -7,19 +7,22 @@ body{
 h1{
     margin-left: 23px;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 98%;
+    margin-top: 3px;
 }
 h3{ 
     margin-left: 23px;
     font-weight: lighter;
+    margin-top: -10px;
 }
 
 #contenedorimg{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 42px;
+    margin-top: 25px;
 
 }
 #form{
@@ -31,27 +34,31 @@ h3{
 }
 #input1{
     height: 40px;
-    width: 309px;
+    width: 300px;
     border: 1.5px solid #004d6b;
     border-radius: 40px;
+    text-align: center;
   
     
 }
 #input2{
     height: 40px;
-    width: 309px;
+    width: 300px;
     border: 1.5px solid #004d6b;
     border-radius: 40px;
+    text-align: center;
 }
 
 #input1::placeholder{
     color: #004d6b5d;
     padding-left: 5px;
+    font-family: 'poppins', sans-serif;
 }
 
 #input2::placeholder{
     color: #004d6b5d;
-    padding-left: 5px;    
+    padding-left: 5px;  
+    font-family: 'poppins', sans-serif; 
 }
 
 #button{
@@ -63,6 +70,7 @@ h3{
     color: #004d6b;
     font-weight: 600;
     cursor: pointer;
+    font-family: 'poppins', sans-serif;
 }
 
 #decoracion1{
