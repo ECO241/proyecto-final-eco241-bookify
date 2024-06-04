@@ -3,34 +3,23 @@ const path = require('path'); // Add this line
 
 const router = express.Router();
 
-let books = []
 
+const UsersController = require('../controllers/utils/UserServices.js');
+const BooksController = require('../controllers/utils/Bookservices.js');
+const LoansController = require('../controllers/utils/LoansServices.js');
 
-router.get('/', (req, res) => {
-    res.json(books);
-});
+router.get('/books', BooksController.getAllBooks);
 
+router.get('/books/:id',  BooksController.getBookById);
 
+router.get('/users', UsersController.getAllUsers);
 
-router.get('/Loans', function(req, res) {
-    res.sendFile(path.join(__dirname, '../static/indexApp/screens/Loans/Loans.html'));
-});
+router.get('/users/:id', UsersController.getUserById);
 
-router.get('/Detail', function(req, res) {
-    res.sendFile(path.join(__dirname, '../static/indexApp/screens/Detail/Detail.html'));
-});
+router.get('/Loans', LoansController.getAllLoans);
 
-router.get('/Renew', function(req, res) {
-    res.sendFile(path.join(__dirname, '../static/indexApp/screens/Renew/Renew.html'));
-});
+router.get('/Loans/:id', LoansController.getLoanById);
 
-
-router.get('/Thanks', function(req, res) {
-    res.sendFile(path.join(__dirname, '../static/indexApp/screens/Thanks/Thanks.html'));
-});
-
-
-router.use('/static', express.static(path.join(__dirname, '/static')));
 
 
 

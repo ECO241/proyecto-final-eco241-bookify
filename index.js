@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 
-const books = require('./routers/appRoutes.js');
-
+const books = require('./routers/appRoutes');
+const screens = require('./routers/screens');
 app.use('/books', books);
 
 app.get('/indexApp', function(req, res) {
@@ -24,6 +24,8 @@ app.get('/indexApp', function(req, res) {
 });
 
 app.use('/static', express.static(path.join(__dirname, '/static')));
+
+app.use('/screens', screens);
 
 
 server.listen(PORT, () => {
