@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../../../../static/plugins/qrCode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../../../../static/indexMopi/screens/scanerBook/scanerBook.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="row justify-content-center mt-5">
+      <div class="col-sm-4 shadow p-3">
+        <h5 class="text-center">Busca el código QR que se encuentra en el respaldar o en la parte inferior de tus libros. </h5>
+        <div class="row text-center">
+          <a id="btn-scan-qr" href="#">
+            <img src="../../../../static/indexMopi/screens/scanerBook/Group 95.png" class="img-fluid text-center" width="175">
+          </a>
+          <canvas hidden="" id="qr-canvas" class="img-fluid"></canvas>
+          </div>
+          <div class="row mx-5 my-3">
+          <button id="btn" class="btn btn-success btn-sm rounded-3 mb-2" onclick="encenderCamara()">Escanear codigo</button>
+          <button id="btn2" class="btn btn-danger btn-sm rounded-3" onclick="cerrarCamara()">Detener escaneo</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../static/QR.js"></script>
+  </body>
+  </html>

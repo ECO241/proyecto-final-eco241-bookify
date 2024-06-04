@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="/static/indexMopi/screens/typeCarnet/typeCarnet.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/logobiblo.png?raw=true" alt="Biblioteca Logo" class="logo">
+        </header>
+        <main>
+            <h1>Para empezar</h1>
+            <p>Digita tu código estudiantil para validar tu usuario.</p>
+            <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/Group%2062.png?raw=true" alt="Student ID Image" class="student-id-img">
+                <input type="text" placeholder="Digite su código estudiantil" class="input-code">
+                <button class="btn primary" onclick="goToScaneerBook()">Continuar</button>
+        </main>
+    </div>
+    <script>
+        function goToScaneerBook() {
+            window.location.href = 'scanerqr';
+        }
+    </script>
+</body>
+</html>

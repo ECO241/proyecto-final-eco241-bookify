@@ -1,0 +1,24 @@
+body{
+    margin-top: 5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+#btn{
+    background-color: #FFCB3A;
+    border-color: transparent;
+    color: #004D6B;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#btn2{
+    border-color: transparent;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.decoracion{
+    width: 7rem;
+    margin-top: -20rem;
+    display: block;
+}
