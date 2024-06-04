@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
     <link rel="stylesheet" href="/static/indexMopi/indexMopi.css">
+    <script>
+        function goToTypeCarnet() {
+            window.location.href = 'Carnet';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -16,7 +21,7 @@
             <h1>Bienvenido al servicio de préstamo y renovación de libros físicos.</h1>
             <h2>¿Qué quieres hacer?</h2>
             <div class="buttons">
-                <button class="btn primary">Hacer un préstamo</button>
+                <button class="btn primary" onclick="goToTypeCarnet()">Hacer un préstamo</button>
                 <button class="btn secondary">Renovar un préstamo</button>
             </div>
         </main>
