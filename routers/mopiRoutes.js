@@ -23,6 +23,11 @@ router.get('/Books', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/bookConfirm/bookConfirm.html'));
 }); 
 
+router.get('/thanks', function(req, res) {
+    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/screenThanks/screenThanks.html'));
+}); 
+
+
 
 
 
