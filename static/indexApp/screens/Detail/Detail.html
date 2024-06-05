@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/indexApp/screens/Detail/Detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Book detail</title>
 </head>
 <body>
     <div id="contenedorimg">
-    <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/logobiblo.png?raw=true" alt="" height="40px">
+    <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/logobiblo.png?raw=true" alt="" height="25px">
     <img id="cover" src="" alt="" height="300px">
     </div>
     <div id="contenedor1">
@@ -18,7 +19,7 @@
     <h3 id="Edition"></h3>
     </div>
     </div>
-    <h1>Tiempo Restante</h1>
+    <h1 class="restante">Tiempo Restante</h1>
     <div class="tiempo_Boton">
         <p id="countdown" ></p>
         <button id="button">Renovar</button>
@@ -26,7 +27,7 @@
 
     <div class="aviso">
     <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/persona3.png?raw=true" alt="" height="80px">
-    <p>Recuerda que la renovación implica registrar el libro nuevamente en nuestro punto físico por seguridad.</p>
+    <p class="texto_aviso">Recuerda que la renovación implica registrar el libro nuevamente en nuestro punto físico por seguridad.</p>
     </div>
     <script src="/static/indexApp/screens/Detail/detail.js"></script>
 </body>
