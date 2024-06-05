@@ -12,7 +12,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .button{
@@ -25,9 +25,24 @@ body{
     font-weight: 600;
     font-size: 1.1rem;
     border-radius: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
+}
+
+#countdown{
+    color: #004d6b;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'poppins', sans-serif;
+    margin-top: -1.2rem;
 }
 
 .titulo{
-    
+    color: #004d6b;
+}
+
+.texto{
+    color: #004d6b;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -1.2rem;
 }
