@@ -26,6 +26,9 @@ router.get('/scanerbook', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/scanerBook/scanerBook.html'));
 }); 
 
+router.get('/scanerqr', function(req, res) {
+    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/scanerQr/scanerQrSocket.html'));
+}); 
 
 
 

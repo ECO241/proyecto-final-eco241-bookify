@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de código QR para reserva específica</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+
+    <h1>Escanea el Qr  para guardar tu fecha de devolución en la app</h1>
+  <div id="qrcode"></div>
+
+  <script>
+    // Obtener la información de la reserva específica
+    async function fetchReservation(id) {
+      const response = await fetch('http://localhost:3000/books/loans');
+      const data = await response.json();
+      return data.Loans.find(loan => loan.id === id);
+    }
+
+    // Función para generar el código QR
+    function generateQRCode(id) {
+      const qr = qrcode(0, 'M');
+      qr.addData(`http://localhost:3000/books/loans/${id}`);
+      qr.make();
+      return qr.createImgTag(5, 10);
+    }
+
+    // Generar código QR para la reserva específica cuando se cargue la página
+    window.onload = async function() {
+      const reservationId = 2; // Cambia este valor al ID de la reserva que desees
+      const reservation = await fetchReservation(reservationId);
+      if (reservation) {
+        const qrContainer = document.getElementById('qrcode');
+        const qrCode = generateQRCode(reservation.id);
+        qrContainer.innerHTML = qrCode;
+      } else {
+        console.error('Reserva no encontrada');
+      }
+    };
+  </script>
+</body>
+</html>
