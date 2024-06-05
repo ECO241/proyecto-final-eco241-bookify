@@ -1,4 +1,3 @@
-
 const PORT = 3000;
 
 const express = require('express');
@@ -31,7 +30,23 @@ app.use('/static', express.static(path.join(__dirname, '/static')));
 
 app.use('/screens', screens);
 
+/*app.get('/scan', (req, res) => {
+    const sessionId = req.query.session_id;
+    // Emitir un evento al cliente con el session_id
+    io.to(sessionId).emit('qrScanned', { sessionId });
+    res.send('QR Code scanned!');
+});
 
+io.on('connection', (socket) => {
+    const sessionId = socket.handshake.query.session_id;
+    socket.join(sessionId);
+    console.log(`Client connected with session_id: ${sessionId}`);
+
+    socket.on('disconnect', () => {
+        console.log(`Client disconnected with session_id: ${sessionId}`);
+    });
+});
+*/
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

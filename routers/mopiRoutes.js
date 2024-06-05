@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path'); 
 
-
 const router = express.Router();
 
 let books = []
@@ -25,6 +24,8 @@ router.get('/thanks', function(req, res) {
 router.get('/scanerqr', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/scanerBook/scanerBook.html'));
 }); 
+
+
 
 
 

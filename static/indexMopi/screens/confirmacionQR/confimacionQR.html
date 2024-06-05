@@ -1,0 +1,33 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualización en Tiempo Real</title>
+</head>
+<body>
+    <h1>Página a actualizar</h1>
+    <div id="status">Esperando escaneo del código QR...</div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // El session_id debe ser el mismo que usaste en el código QR
+        const sessionId = '12345';
+        const socket = io('/', { query: `session_id=${sessionId}` });
+
+        socket.on('qrScanned', (data) => {
+            document.getElementById('status').innerText = '¡Código QR escaneado!';
+            // Lógica para actualizar la página
+            location.reload();
+        });
+
+        socket.on('connect', () => {
+            console.log('Conectado al servidor de WebSocket');
+        });
+
+        socket.on('disconnect', () => {
+            console.log('Desconectado del servidor de WebSocket');
+        });
+    </script>
+</body>
+</html> -->
