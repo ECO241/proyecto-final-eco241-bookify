@@ -24,6 +24,7 @@ const encenderCamara = () => {
       video.play();
       tick();
       scan();
+      
     });
 };
 
@@ -41,8 +42,9 @@ function tick() {
 function scan() {
   try {
     qrcode.decode();
+    
   } catch (e) {
-    setTimeout(scan, 300);
+    setTimeout(scan, 3000);
   }
 }
 
@@ -59,7 +61,9 @@ qrcode.callback = (respuesta) => {
   if (respuesta) {
     
     console.log(respuesta);
+    window.location.href = respuesta;
     Swal.fire("Scaneado correctamente")
+    
     activarSonido();
     //encenderCamara();    
     cerrarCamara();    

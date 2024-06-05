@@ -1,3 +1,5 @@
+
+
 class BookCard extends HTMLElement {
     constructor() {
     super();
@@ -86,24 +88,29 @@ function gotodetailwithid(id){
 
 async function getinfo() {
     try {
-        let response = await fetch('http://localhost:3000/books/books');
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        let response = await fetch('http://localhost:3000/books/books/' + id);
         let data = await response.json();
-        let books = data.Books;
+        // Change 'books' to 'Book'
         
         console.log('Fetched data:', data); // Debugging line
+        const getfetechetdata = data.data;
+        const getcero = getfetechetdata[0];
         
-        if (Array.isArray(books)) {
-            books.forEach(book => {
-                const bookCard = document.createElement('book-card');
-                bookCard.setAttribute('title', book.Name);
-                bookCard.setAttribute('author', book.Author);
-                bookCard.setAttribute('edition', book.Edition);
-                bookCard.setAttribute('cover-src', book.Cover);
-                bookCard.addEventListener('click', () => gotodetailwithid(book.id));
-                document.body.appendChild(bookCard);
-            });
+        console.log(getcero);
+        
+        if (getcero) { // Check if 'book' exists
+            const bookCard = document.createElement('book-card');
+            bookCard.setAttribute('title', getcero.Name);
+            bookCard.setAttribute('author', getcero.Author);
+            bookCard.setAttribute('edition', getcero.Edition);
+            bookCard.setAttribute('cover-src', getcero.Cover);
+            bookCard.addEventListener('click', () => gotodetailwithid(getcero.id));
+            document.body.appendChild(bookCard);
         } else {
-            console.error('Expected an array but got:', books);
+            console.error('Expected a book but got:', data);
         }
     } catch (error) {
         console.error('Error fetching data:', error);
