@@ -1,5 +1,33 @@
+body{
+    font-family: 'poppins', sans-serif;
+}
+
 .logoB{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.infoB{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.button{
+    background-color: #FFCB3A;
+    border-color: transparent;
+    width: 9rem;
+    height: 2rem;
+    color: #004d6b;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    margin-top: 5rem;
+}
+
+.titulo{
+    
 }
