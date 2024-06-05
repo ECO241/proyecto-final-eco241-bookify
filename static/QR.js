@@ -14,7 +14,7 @@ let scanning = false;
 //funcion para encender la camara
 const encenderCamara = () => {
   navigator.mediaDevices
-    .getUserMedia({ video: { facingMode: "environment" } })
+    .getUserMedia({ video: { facingMode: "environment" }})
     .then(function (stream) {
       scanning = true;
       btnScanQR.hidden = true;
