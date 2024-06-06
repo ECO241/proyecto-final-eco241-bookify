@@ -47,9 +47,27 @@ io.on('connection', (socket) => {
     });
 });
 */
+
+const port = new SerialPort({
+    path: 'COM10',
+    baudRate: 9600,
+});
+
+const parser = new ReadlineParser({ delimiter: '\r\n' });
+port.pipe(parser);
+
+parser.write('START\n');
+
+parser.on('data', (data) => {
+    if (String(data).includes('ON')) {
+        emitMove(data);
+    }
+});
+port.on('error', (err) => {
+    console.log('Error: ', err.message);
+});
+
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
-
 
