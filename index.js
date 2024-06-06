@@ -5,6 +5,7 @@ const http = require('http');
 const socketIO = require('socket.io');
 const path = require('path');
 const cors = require('cors');
+const { SerialPort, ReadlineParser } = require('serialport');
 
 const app = express();
 const server = http.createServer(app);
@@ -35,18 +36,15 @@ app.use('/screens', screens);
     // Emitir un evento al cliente con el session_id
     io.to(sessionId).emit('qrScanned', { sessionId });
     res.send('QR Code scanned!');
-});
+});*/
 
 io.on('connection', (socket) => {
-    const sessionId = socket.handshake.query.session_id;
-    socket.join(sessionId);
-    console.log(`Client connected with session_id: ${sessionId}`);
+    console.log(`Client connected`);
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected with session_id: ${sessionId}`);
     });
 });
-*/
 
 const port = new SerialPort({
     path: 'COM10',
@@ -60,7 +58,7 @@ parser.write('START\n');
 
 parser.on('data', (data) => {
     if (String(data).includes('ON')) {
-        emitMove(data);
+        io.emit("boton presionado");
     }
 });
 port.on('error', (err) => {

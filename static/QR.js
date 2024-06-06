@@ -1,6 +1,5 @@
-const { boolean } = require("zod");
+//const { boolean } = require("zod");
 const socket = io("http://localhost:3000")
-
 //crea elemento
 const video = document.createElement("video");
 
@@ -71,4 +70,8 @@ qrcode.callback = (respuesta) => {
 //evento para mostrar la camara sin el boton 
 window.addEventListener('load', (e) => {
   encenderCamara();
+})
+
+socket.on("boton presionado", ()=>{
+  encenderCamara()
 })
