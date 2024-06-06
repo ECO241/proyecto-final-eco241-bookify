@@ -29,8 +29,20 @@ const UsersController = {
                 }
                 return data;
             },
+            
+            putloan: async (loan,id) => {
+                const { data, error } = await supabase
+                    .from("Users")
+                    .eq("id", id)
+                    .insert([loan]);
+
+                if (error) {
+                    throw new Error(error.message);
+                }
+                return data;
         
-            };
+            },
+          };
         
 
     module.exports = UsersController;

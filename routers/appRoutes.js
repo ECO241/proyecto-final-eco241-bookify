@@ -8,6 +8,8 @@ const UsersController = require('../controllers/utils/UserServices.js');
 const BooksController = require('../controllers/utils/Bookservices.js');
 const LoansController = require('../controllers/utils/LoansServices.js');
 
+router.put('/usersloans/:id', UsersController.putloan);
+
 router.get('/books', BooksController.getAllBooks);
 
 router.get('/books/:id',  BooksController.getBookById);

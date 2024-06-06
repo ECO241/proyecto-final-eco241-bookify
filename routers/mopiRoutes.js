@@ -25,7 +25,9 @@ router.get('/scanerqr', function(req, res) {
     res.sendFile(path.join(__dirname, '../static/indexMopi/screens/scanerBook/scanerBook.html'));
 }); 
 
-
+router.get('/timeleft', function(req, res) {
+    res.sendFile(path.join(__dirname, '../static/indexMopi/screens/Time_left/Time_left.html'));
+}); 
 
 
 

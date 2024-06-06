@@ -134,15 +134,34 @@ async function newloan() {
         console.log('New loan:', data);
         loancreada++;
         localStorage.setItem('loancreada', loancreada);
-        window.location.replace('/books1/thanks');
+        const idsiguiente = loancreada - 1;
+        window.location.replace('/books1/timeleft/?id=' + idsiguiente);
     } catch (error) {
         console.error('Error creating a new loan:', error);
     }
 }
 
 const button = document.getElementById('button');
-button.addEventListener('click', newloan);
+button.addEventListener('click', newloan, putloan);
 
-
+async function putloan () {
+    try {
+        const getuserid = window.sessionStorage.getItem('idDeUsuario');
+        const response = await fetch('http://localhost:3000/books/usersloans/?id=' + getuserid , {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Loans: loancreada,
+                
+                
+            })
+        });
+        console.log(response);
+}
+catch (error) {
+    console.error('Error:', error);
+}}
 
 customElements.define('book-card', BookCard);

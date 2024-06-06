@@ -16,16 +16,13 @@
             <p>Digita tu código estudiantil para validar tu usuario.</p>
             <img src="https://github.com/NaranjaDev/imagenes-bookify/blob/main/Group%2062.png?raw=true" alt="Student ID Image" class="student-id-img">
             <div class="codigo">  
-            <input type="text" placeholder="Digite su código estudiantil" class="input-code">
-                <button class="btn primary" onclick="goToScaneerBook()">Continuar</button>
+            <input id="idstudent" type="text" placeholder="Digite su código estudiantil" class="input-code">
+                <button id="button" class="btn primary" onclick="goToScaneerBook()">Continuar</button>
             </div>  
         </main>
     </div>
     
-    <script>
-        function goToScaneerBook() {
-            window.location.href = 'scanerqr';
-        }
-    </script>
+
+    <script src="/static/indexMopi/screens/typeCarnet/typeCarnet.js"></script>
 </body>
 </html>

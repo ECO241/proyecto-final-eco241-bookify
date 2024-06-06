@@ -19,6 +19,15 @@ const Userservice = {
         console.error("No se pudo traer data de Supabase", error.message);
         res.status(500).json({ success: false, error: "Error interno"}); 
       }
+    },
+    putloan: async (req, res) => {
+      try{
+        const data = await Userservices.putloan(req.body);
+        res.json({ success: true, data});      
+      } catch (error) {
+        console.error("No se pudo crear el prestamo", error.message);
+        res.status(500).json({ success: false, error: "Error interno"}); 
+      }
     }
 }
 
