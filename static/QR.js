@@ -53,6 +53,7 @@ const cerrarCamara = () => {
   });
   canvasElement.hidden = true;
   btnScanQR.hidden = false;
+  scanning = false
 };
 
 
@@ -73,5 +74,9 @@ window.addEventListener('load', (e) => {
 })
 
 socket.on("boton presionado", ()=>{
-  encenderCamara()
+  if (scanning){
+    cerrarCamara()
+  } else {
+    encenderCamara()
+  }
 })
