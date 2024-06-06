@@ -14,7 +14,7 @@ let scanning = false;
 //funcion para encender la camara
 const encenderCamara = () => {
   navigator.mediaDevices
-    .getUserMedia({ video: { facingMode: "environment" } })
+    .getUserMedia({ video: { facingMode: "environment" }})
     .then(function (stream) {
       scanning = true;
       btnScanQR.hidden = true;
@@ -24,8 +24,11 @@ const encenderCamara = () => {
       video.play();
       tick();
       scan();
+      
     });
 };
+
+
 
 //funciones para levantar las funiones de encendido de la camara
 function tick() {
@@ -39,8 +42,9 @@ function tick() {
 function scan() {
   try {
     qrcode.decode();
+    
   } catch (e) {
-    setTimeout(scan, 300);
+    setTimeout(scan, 3000);
   }
 }
 
@@ -55,14 +59,19 @@ const cerrarCamara = () => {
 //callback cuando termina de leer el codigo QR
 qrcode.callback = (respuesta) => {
   if (respuesta) {
-    //console.log(respuesta);
-    Swal.fire(respuesta)
+    
+    console.log(respuesta);
+    window.location.href = respuesta;
+    Swal.fire("Scaneado correctamente")
+    
     activarSonido();
     //encenderCamara();    
     cerrarCamara();    
-
+    
   }
 };
+
+
 //evento para mostrar la camara sin el boton 
 window.addEventListener('load', (e) => {
   encenderCamara();

@@ -20,6 +20,7 @@ router.get('/Loans', LoansController.getAllLoans);
 
 router.get('/Loans/:id', LoansController.getLoanById);
 
+router.post('/Loanspost', LoansController.createLoan);
 
 
 
