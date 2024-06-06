@@ -1,0 +1,48 @@
+body{
+    font-family: 'poppins', sans-serif;
+}
+
+.logoB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoB{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+
+.button{
+    background-color: #FFCB3A;
+    border-color: transparent;
+    width: 9rem;
+    height: 2rem;
+    color: #004d6b;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+#countdown{
+    color: #004d6b;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'poppins', sans-serif;
+    margin-top: -1.2rem;
+}
+
+.titulo{
+    color: #004d6b;
+}
+
+.texto{
+    color: #004d6b;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -1.2rem;
+}

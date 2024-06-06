@@ -1,3 +1,5 @@
+//const { boolean } = require("zod");
+const socket = io("http://localhost:3000")
 //crea elemento
 const video = document.createElement("video");
 
@@ -55,7 +57,10 @@ const cerrarCamara = () => {
   });
   canvasElement.hidden = true;
   btnScanQR.hidden = false;
+  scanning = false
 };
+
+
 //callback cuando termina de leer el codigo QR
 qrcode.callback = (respuesta) => {
   if (respuesta) {
@@ -75,4 +80,12 @@ qrcode.callback = (respuesta) => {
 //evento para mostrar la camara sin el boton 
 window.addEventListener('load', (e) => {
   encenderCamara();
+})
+
+socket.on("boton presionado", ()=>{
+  if (scanning){
+    cerrarCamara()
+  } else {
+    encenderCamara()
+  }
 })
